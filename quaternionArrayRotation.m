@@ -30,9 +30,9 @@ function [rotated_vector_array] = quaternionArrayRotation(rotation_quaternion_ar
 	%		+ size is expected to be a 3xN
 	
 	q0 = rotation_quaternion_array(1,:);
-	q1 = rotation_quaternion_array(1,:);
-	q2 = rotation_quaternion_array(1,:);
-	q3 = rotation_quaternion_array(1,:);
+	q1 = rotation_quaternion_array(2,:);
+	q2 = rotation_quaternion_array(3,:);
+	q3 = rotation_quaternion_array(4,:);
 	
 	% https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Quaternion-derived_rotation_matrix
 	R1 = [2*(q0.^2 + q1.^2) - 1; 2*(q1.*q2 + q0.*q3); 2*(q1.*q3 - q0.*q2)];
